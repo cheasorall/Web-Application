@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('admin', 'home');
+Route::view('cards.blade');
