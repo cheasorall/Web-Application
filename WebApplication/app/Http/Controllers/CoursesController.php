@@ -42,11 +42,13 @@ class CoursesController extends Controller
 
     public function edit($id){
         $course = Courses::find($id);
-        return view('layouts.courses.edit')->with('course', $course);
+        return view('layouts.courses.edit')->with('courses', $course);
     }
 
-    public function delete(){
-
+    public function delete($id){
+        $course = Courses::find($id);
+        $course->delete();
+        return view('layouts.courses.index')->with('courses', Courses::ALL());
     }
 
     public function update(Request $request, $id){

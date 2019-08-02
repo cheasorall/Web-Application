@@ -67,6 +67,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         'as' => 'course.update'
     ]);
 
+    
+
 });
 
 
